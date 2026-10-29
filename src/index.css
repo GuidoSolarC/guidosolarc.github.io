@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-cherry: #a4243b;
+  --color-sand: #d8c99b;
+  --color-apricot: #d8973c;
+  --color-caramel: #bd632f;
+  --color-charcoal: #273e47;
+}
+
+:root {
+  --cherry-rose: #a4243b;
+  --sand: #d8c99b;
+  --golden-apricot: #d8973c;
+  --burnt-caramel: #bd632f;
+  --charcoal-blue: #273e47;
+
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #faf9f6; /* warm subtle paper/minimal neutral */
+    color: #273e47; /* charcoal-blue as deep readable ink */
+  }
+
+  .dark body {
+    background-color: #12181b; /* deep slate-charcoal */
+    color: #f1ede4;
+  }
+}
+
+/* Minimalist Material Elevation */
+.m3-elevation-1 {
+  box-shadow: 0 1px 2px rgba(39, 62, 71, 0.05), 0 1px 4px rgba(39, 62, 71, 0.04);
+}
+
+.m3-elevation-2 {
+  box-shadow: 0 2px 8px rgba(39, 62, 71, 0.08);
+}
+
+.dark .m3-elevation-1 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.dark .m3-elevation-2 {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}

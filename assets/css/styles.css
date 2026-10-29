@@ -1,0 +1,39 @@
+html { scroll-behavior: smooth; }
+
+body { padding-top: 56px; }
+
+.hero {
+  min-height: 80vh;
+  background: linear-gradient(135deg, rgba(13, 110, 253, 0.08), rgba(108, 117, 125, 0.05));
+}
+
+.hero-text { max-width: 720px; }
+
+.section-title {
+  font-weight: 700;
+  position: relative;
+  padding-bottom: .5rem;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 56px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--bs-primary);
+}
+
+#contacto .section-title::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline .card { border-left: 4px solid var(--bs-primary); }
+
+.card { transition: transform .15s ease; }
+.card:hover { transform: translateY(-2px); }
+
+section { scroll-margin-top: 70px; }
